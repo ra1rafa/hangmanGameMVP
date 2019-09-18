@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameScene: SKScene {
     
@@ -84,10 +85,16 @@ class GameScene: SKScene {
     var labelX9: SKLabelNode!
     
     var labelXArray: [SKLabelNode] = []
-
+    
+    //sound "gato"
+    var bombSoundEffect: AVAudioPlayer?
+    
+    
     override func didMove(to view: SKView) {
+        //letters for choose
         letterA = (self.childNode(withName: "A") as! SKSpriteNode)
         letterA.texture = SKTexture(imageNamed: "A")
+        
         letterB = (self.childNode(withName: "B") as! SKSpriteNode)
         letterB.texture = SKTexture(imageNamed: "B")
         letterC = (self.childNode(withName: "C") as! SKSpriteNode)
@@ -139,11 +146,13 @@ class GameScene: SKScene {
         letterZ = (self.childNode(withName: "Z") as! SKSpriteNode)
         letterZ.texture = SKTexture(imageNamed: "Z")
         
+        //labels for correct answer
         label1 = (self.childNode(withName: "label1") as! SKLabelNode)
         label2 = (self.childNode(withName: "label2") as! SKLabelNode)
         label3 = (self.childNode(withName: "label3") as! SKLabelNode)
         label4 = (self.childNode(withName: "label4") as! SKLabelNode)
         
+        //labels for wrong answer
         labelX1 = (self.childNode(withName: "labelX1") as! SKLabelNode)
         labelX2 = (self.childNode(withName: "labelX2") as! SKLabelNode)
         labelX3 = (self.childNode(withName: "labelX3") as! SKLabelNode)
@@ -154,9 +163,8 @@ class GameScene: SKScene {
         labelX8 = (self.childNode(withName: "labelX8") as! SKLabelNode)
         labelX9 = (self.childNode(withName: "labelX9") as! SKLabelNode)
         
-//        var array = [labelX1,labelX2,labelX3,labelX4,labelX5,labelX6,labelX7,labelX8,labelX9]
         labelXArray += [labelX1,labelX2,labelX3,labelX4,labelX5,labelX6,labelX7,labelX8,labelX9]
-//        print(labelXArray)
+
     }
     
     
@@ -189,39 +197,80 @@ class GameScene: SKScene {
         let touch = touches.first
         
         if let location = touch?.location(in: self){
-            
             let nodesArray = self.nodes(at: location)
-            
             if nodesArray.first?.name == nil{
-                
-                
             } else if nodesArray.first?.name == "G"{
                 label1.text = nodesArray.first?.name
                 letterG.isHidden = true
-//                letterG.isUserInteractionEnabled = true
-                
             } else if nodesArray.first?.name == "A"{
                 label2.text = nodesArray.first?.name
                 letterA.isHidden = true
-                
             } else if nodesArray.first?.name == "T"{
                 label3.text = nodesArray.first?.name
                 letterT.isHidden = true
-                
             } else if nodesArray.first?.name == "O"{
                 label4.text = nodesArray.first?.name
                 letterO.isHidden = true
-                
-                
             } else {
                 labelXArray[0].text = nodesArray.first?.name
                 labelXArray.remove(at: 0)
                 nodesArray.first?.isHidden = true
             }
-//            print(nodesArray.first?.name)
-
-            
+            if letterA.contains(location){
+                letterA.run(SKAction.playSoundFileNamed("A.mp3", waitForCompletion: false))
+            } else if letterB.contains(location){
+                letterB.run(SKAction.playSoundFileNamed("B.mp3", waitForCompletion: false))
+            } else if letterC.contains(location){
+                letterC.run(SKAction.playSoundFileNamed("C.mp3", waitForCompletion: false))
+            } else if letterD.contains(location){
+                letterD.run(SKAction.playSoundFileNamed("D.mp3", waitForCompletion: false))
+            } else if letterE.contains(location){
+                letterE.run(SKAction.playSoundFileNamed("E.mp3", waitForCompletion: false))
+            } else if letterF.contains(location){
+                letterF.run(SKAction.playSoundFileNamed("F.mp3", waitForCompletion: false))
+            } else if letterG.contains(location){
+                letterA.run(SKAction.playSoundFileNamed("G.mp3", waitForCompletion: false))
+            } else if letterH.contains(location){
+                letterH.run(SKAction.playSoundFileNamed("H.mp3", waitForCompletion: false))
+            } else if letterI.contains(location){
+                letterI.run(SKAction.playSoundFileNamed("I.mp3", waitForCompletion: false))
+            } else if letterJ.contains(location){
+                letterJ.run(SKAction.playSoundFileNamed("J.mp3", waitForCompletion: false))
+            } else if letterL.contains(location){
+                letterL.run(SKAction.playSoundFileNamed("L.mp3", waitForCompletion: false))
+            } else if letterM.contains(location){
+                letterM.run(SKAction.playSoundFileNamed("M.mp3", waitForCompletion: false))
+            } else if letterN.contains(location){
+                letterN.run(SKAction.playSoundFileNamed("N.mp3", waitForCompletion: false))
+            } else if letterO.contains(location){
+                letterO.run(SKAction.playSoundFileNamed("O.mp3", waitForCompletion: false))
+            } else if letterP.contains(location){
+                letterP.run(SKAction.playSoundFileNamed("P.mp3", waitForCompletion: false))
+            } else if letterQ.contains(location){
+                letterQ.run(SKAction.playSoundFileNamed("Q.mp3", waitForCompletion: false))
+            } else if letterR.contains(location){
+                letterR.run(SKAction.playSoundFileNamed("R.mp3", waitForCompletion: false))
+            } else if letterS.contains(location){
+                letterS.run(SKAction.playSoundFileNamed("S.mp3", waitForCompletion: false))
+            } else if letterT.contains(location){
+                letterT.run(SKAction.playSoundFileNamed("T.mp3", waitForCompletion: false))
+            } else if letterU.contains(location){
+                letterU.run(SKAction.playSoundFileNamed("U.mp3", waitForCompletion: false))
+            } else if letterV.contains(location){
+                letterV.run(SKAction.playSoundFileNamed("V.mp3", waitForCompletion: false))
+            } else if letterX.contains(location){
+                letterX.run(SKAction.playSoundFileNamed("X.mp3", waitForCompletion: false))
+            } else if letterW.contains(location){
+                letterW.run(SKAction.playSoundFileNamed("W.mp3", waitForCompletion: false))
+            } else if letterY.contains(location){
+                letterY.run(SKAction.playSoundFileNamed("Y.mp3", waitForCompletion: false))
+            } else if letterK.contains(location){
+                letterA.run(SKAction.playSoundFileNamed("K.mp3", waitForCompletion: false))
+            } else if letterZ.contains(location){
+                letterA.run(SKAction.playSoundFileNamed("Z.mp3", waitForCompletion: false))
+            }
         }
+        
         
     }
     

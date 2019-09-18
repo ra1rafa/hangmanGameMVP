@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E40387E32332922C0062CA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40387E22332922C0062CA79 /* Assets.xcassets */; };
+		E460D62623329E7F00CC4FA0 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E460D62523329E7F00CC4FA0 /* A.mp3 */; };
 		E48E55C1231E906C009C8596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E55C0231E906C009C8596 /* AppDelegate.swift */; };
 		E48E55C3231E906C009C8596 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E48E55C2231E906C009C8596 /* GameScene.sks */; };
 		E48E55C5231E906C009C8596 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E48E55C4231E906C009C8596 /* Actions.sks */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		E40387E22332922C0062CA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E460D62523329E7F00CC4FA0 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
 		E48E55BD231E906C009C8596 /* ForcaGeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForcaGeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48E55C0231E906C009C8596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48E55C2231E906C009C8596 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				E48E55C4231E906C009C8596 /* Actions.sks */,
 				E48E55C6231E906C009C8596 /* GameScene.swift */,
 				E48E55C8231E906C009C8596 /* GameViewController.swift */,
+				E460D62523329E7F00CC4FA0 /* A.mp3 */,
 				E40387E22332922C0062CA79 /* Assets.xcassets */,
 				E48E55CA231E906C009C8596 /* Main.storyboard */,
 				E48E55CF231E906D009C8596 /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E460D62623329E7F00CC4FA0 /* A.mp3 in Resources */,
 				E48E55CC231E906C009C8596 /* Main.storyboard in Resources */,
 				E48E55C3231E906C009C8596 /* GameScene.sks in Resources */,
 				E48E55D1231E906D009C8596 /* LaunchScreen.storyboard in Resources */,
